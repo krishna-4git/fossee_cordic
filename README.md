@@ -51,7 +51,7 @@ $$
 
 ---
 
-## ⚙️ Fixed-Point Representation
+## Fixed-Point Representation
 
 **Fixed-point representation** is used to represent fractional numbers with a fixed number of bits for both integer and fractional parts.  
 It is preferred in hardware for **speed** and **resource efficiency**, compared to floating-point arithmetic.
@@ -68,7 +68,7 @@ It is preferred in hardware for **speed** and **resource efficiency**, compared 
 
 ---
 
-## 🧩 Project Details
+##  Project Details
 
 ### Verilog Implementation
 - The processor is implemented in **Verilog HDL**.
@@ -81,15 +81,15 @@ It is preferred in hardware for **speed** and **resource efficiency**, compared 
 
 ---
 
-## 🧰 How to Use
+## How to Use
 
-### 🔧 Prerequisites
+###  Prerequisites
 Ensure you have the following installed:
 - **eSim**
 - **Iverilog**
 - **GTKWave**
 
-### ▶️ Running the Simulation on eSim
+### Running the Simulation on eSim
 
 1. Open your project in **eSim**.  
 2. Rerun the **Verilog to Ngspice conversion** for the file `cordic.v`.  
@@ -100,50 +100,30 @@ Ensure you have the following installed:
 
 ---
 
-## 🧩 Troubleshooting
+##  Troubleshooting
 
 If you encounter the following error:
 
 unable to find definition of model u2
 
-markdown
-Copy code
 
-especially when using **eSim 2.3 on Windows**, follow these steps:
+especially when using **eSim 2.3 or above**, follow these steps:
 
-1. Open **Command Prompt (CMD)**.  
-2. Navigate to:
-C:\FOSSEE\nghdl-simulator\src\xspice\icm\Ngveri
-
-markdown
-Copy code
-3. Open the file `modpath.lst` in Notepad:
-notepad modpath.lst
-
-pgsql
-Copy code
-4. Delete all existing content and add only the line:
-cordic
-
-yaml
-Copy code
+1. Open Terminal.  
+2. Navigate to: FOSSEE\nghdl-simulator\src\xspice\icm\Ngveri
+3. Open the file `modpath.lst` in Notepad: notepad modpath.lst
+4. Delete all existing content and add only the line: cordic
 5. Save and close the file.  
 6. Rerun the **Verilog to Ngspice** process for `cordic.v`.  
 7. Proceed with the simulation steps listed above.
 
 ---
 
-## 🧮 Future Work
+##  Future Work
 
 - Extend to **18-bit precision** for improved accuracy.  
 - Add **CORDIC-based tangent computation**.  
 - Explore **FPGA synthesis** and **real-time implementation**.
-
----
-
-## 📄 License
-
-This project is open-source and available under the **MIT License**.
 
 ---
 
