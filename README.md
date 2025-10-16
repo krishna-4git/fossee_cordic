@@ -74,18 +74,18 @@ It is preferred in hardware for **speed** and **resource efficiency**, compared 
 - The processor is implemented in **Verilog HDL**.
 - It consists of a **9-stage pipeline**, where each stage performs one iteration of the CORDIC algorithm.
 
-![KiCad Schematic of the CORDIC Processor](schematic_9bit.png)
+![KiCad Schematic of the CORDIC Processor](images/schematic_9bit.png)
 
 ### Verification
 - Simulation is carried out using **eSim**, integrated with **Iverilog** and **GTKWave**.
 - The results match theoretical sine and cosine values closely.
 - Minor discrepancies arise from **quantization** and **truncation** in the 9-bit representation.
 
-![GTKWave Simulation Waveform](gktwave_9bit.png)
+![GTKWave Simulation Waveform](images/gktwave_9bit.png)
 
-![Text-based Simulation Output](output_9bit.png)
+![Text-based Simulation Output](images/output_9bit.png)
 
-![Comparison of Expected vs. Simulated Outputs](error_percentage.png)
+![Comparison of Expected vs. Simulated Outputs](images/error_percentage.png)
 
 ---
 ---
