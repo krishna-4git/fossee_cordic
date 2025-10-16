@@ -6,9 +6,9 @@ The project is developed using **open-source EDA tools** — **eSim**, **Iverilo
 The **CORDIC algorithm** is chosen for its **hardware efficiency**, as it computes trigonometric functions using only **shift** and **addition** operations.  
 This 9-bit implementation serves as a verified foundation for a future, higher-precision **18-bit design**.
 
+---
 
-
-## What is CORDIC?
+##  What is CORDIC?
 
 The **CORDIC algorithm** (Coordinate Rotation Digital Computer) is an iterative, multiplier-less technique used to perform **vector rotations**.  
 In **Rotation Mode**, it rotates a starting vector by a target angle through a series of smaller micro-rotations.
@@ -17,35 +17,37 @@ The angles of these micro-rotations are chosen such that their tangents are powe
 
 ### Iterative Equations
 
-\[
+$$
 x_{i+1} = x_i - d_i \cdot y_i \cdot 2^{-i}
-\]  
-\[
+$$
+
+$$
 y_{i+1} = y_i + d_i \cdot x_i \cdot 2^{-i}
-\]  
-\[
+$$
+
+$$
 z_{i+1} = z_i - d_i \cdot \alpha_i
-\]
+$$
 
 where  
 
-\[
+$$
 \alpha_i = \arctan(2^{-i})
-\]
+$$
 
-To compute sine and cosine, the starting vector \((x_0, y_0)\) is initialized as:
+To compute sine and cosine, the starting vector $(x_0, y_0)$ is initialized as:
 
-\[
+$$
 (x_0, y_0) = \left( \frac{1}{K}, 0 \right)
-\]
+$$
 
-where \( K \) is the inherent gain of the algorithm.
+where **K** is the inherent gain of the algorithm.
 
 After **N iterations**, the final vector approximates:
 
-\[
+$$
 (x_N, y_N) = (\cos(\theta), \sin(\theta))
-\]
+$$
 
 ---
 
@@ -57,12 +59,12 @@ It is preferred in hardware for **speed** and **resource efficiency**, compared 
 ### Format Used in This Project
 
 - **Bit Width:** 9-bit signed fixed-point numbers  
-- **Angle:** Mapped from degrees \([-180°, +180°)\) to integers \([-256, 255]\)  
-- **Sine/Cosine:** Mapped from \([-1.0, +1.0)\) to integers \([-256, 255]\)
+- **Angle:** Mapped from degrees `[-180°, +180°)` to integers `[-256, 255]`  
+- **Sine/Cosine:** Mapped from `[-1.0, +1.0)` to integers `[-256, 255]`
 
 **Examples:**
-- \(1.0 \rightarrow 255\)
-- \( \frac{1}{K} \approx 0.60725 \rightarrow 155 \)
+- `1.0 → 255`
+- `1/K ≈ 0.60725 → 155`
 
 ---
 
@@ -102,3 +104,50 @@ Ensure you have the following installed:
 
 If you encounter the following error:
 
+unable to find definition of model u2
+
+markdown
+Copy code
+
+especially when using **eSim 2.3 on Windows**, follow these steps:
+
+1. Open **Command Prompt (CMD)**.  
+2. Navigate to:
+C:\FOSSEE\nghdl-simulator\src\xspice\icm\Ngveri
+
+markdown
+Copy code
+3. Open the file `modpath.lst` in Notepad:
+notepad modpath.lst
+
+pgsql
+Copy code
+4. Delete all existing content and add only the line:
+cordic
+
+yaml
+Copy code
+5. Save and close the file.  
+6. Rerun the **Verilog to Ngspice** process for `cordic.v`.  
+7. Proceed with the simulation steps listed above.
+
+---
+
+## 🧮 Future Work
+
+- Extend to **18-bit precision** for improved accuracy.  
+- Add **CORDIC-based tangent computation**.  
+- Explore **FPGA synthesis** and **real-time implementation**.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Krishna**  
+🔗 [GitHub Repository](https://github.com/krishna-4git/cordic_verilog-4u)
