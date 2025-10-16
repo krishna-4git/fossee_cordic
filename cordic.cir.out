@@ -1,0 +1,82 @@
+* c:\temp_esim\cordic\cordic.cir
+
+* u5  gnd net-_u1-pad1_ gnd gnd net-_u1-pad1_ net-_u1-pad1_ gnd net-_u1-pad1_ net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ net-_u2-pad6_ net-_u2-pad7_ net-_u2-pad8_ adc_bridge_8
+* u1  net-_u1-pad1_ gnd gnd gnd gnd gnd gnd gnd net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ net-_u1-pad14_ net-_u1-pad15_ net-_u1-pad16_ adc_bridge_8
+* u3  gnd gnd gnd gnd net-_u3-pad5_ gnd gnd gnd net-_u2-pad17_ net-_u2-pad18_ net-_u2-pad19_ net-_u2-pad20_ net-_u2-pad21_ net-_u2-pad22_ net-_u2-pad23_ net-_u2-pad24_ adc_bridge_8
+* u9  net-_u2-pad29_ net-_u2-pad30_ net-_u2-pad31_ net-_u2-pad32_ net-_u2-pad33_ net-_u2-pad34_ net-_u2-pad35_ net-_u2-pad36_ sine8 sine7 sine6 sine5 sine4 sine3 sine2 sin1 dac_bridge_8
+* u10  net-_u10-pad1_ net-_u10-pad2_ net-_u10-pad3_ net-_u10-pad4_ net-_u10-pad5_ net-_u10-pad6_ net-_u10-pad7_ net-_u10-pad8_ sin0 cosine8 cosine7 cosine6 cosine5 cosine4 cosine3 cosine2 dac_bridge_8
+* u8  net-_u2-pad45_ net-_u2-pad46_ cosine1 cosine0 dac_bridge_2
+v1  net-_u4-pad4_ gnd pulse(0.5m 5 0 1n 1n 50n 100n)
+* u6  cosine0 plot_v1
+* u11  cosine1 plot_v1
+* u13  sine6 plot_v1
+* u20  sine5 plot_v1
+* u14  sine4 plot_v1
+* u21  sine3 plot_v1
+* u15  sine2 plot_v1
+* u22  sin1 plot_v1
+* u16  cosine8 plot_v1
+* u23  sin0 plot_v1
+* u17  cosine7 plot_v1
+* u24  cosine6 plot_v1
+* u18  cosine5 plot_v1
+* u25  cosine4 plot_v1
+* u19  cosine3 plot_v1
+* u26  cosine2 plot_v1
+* u7  sine8 plot_v1
+* u12  sine7 plot_v1
+* u4  gnd gnd gnd net-_u4-pad4_ net-_u2-pad25_ net-_u2-pad26_ net-_u2-pad27_ net-_u2-pad28_ adc_bridge_4
+v2 net-_u1-pad1_ gnd  dc 5
+v3 net-_u3-pad5_ gnd  dc 5
+* u2  net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ net-_u2-pad6_ net-_u2-pad7_ net-_u2-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ net-_u1-pad14_ net-_u1-pad15_ net-_u1-pad16_ net-_u2-pad17_ net-_u2-pad18_ net-_u2-pad19_ net-_u2-pad20_ net-_u2-pad21_ net-_u2-pad22_ net-_u2-pad23_ net-_u2-pad24_ net-_u2-pad25_ net-_u2-pad26_ net-_u2-pad27_ net-_u2-pad28_ net-_u2-pad29_ net-_u2-pad30_ net-_u2-pad31_ net-_u2-pad32_ net-_u2-pad33_ net-_u2-pad34_ net-_u2-pad35_ net-_u2-pad36_ net-_u10-pad1_ net-_u10-pad2_ net-_u10-pad3_ net-_u10-pad4_ net-_u10-pad5_ net-_u10-pad6_ net-_u10-pad7_ net-_u10-pad8_ net-_u2-pad45_ net-_u2-pad46_ cordic
+a1 [gnd net-_u1-pad1_ gnd gnd net-_u1-pad1_ net-_u1-pad1_ gnd net-_u1-pad1_ ] [net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ net-_u2-pad6_ net-_u2-pad7_ net-_u2-pad8_ ] u5
+a2 [net-_u1-pad1_ gnd gnd gnd gnd gnd gnd gnd ] [net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ net-_u1-pad14_ net-_u1-pad15_ net-_u1-pad16_ ] u1
+a3 [gnd gnd gnd gnd net-_u3-pad5_ gnd gnd gnd ] [net-_u2-pad17_ net-_u2-pad18_ net-_u2-pad19_ net-_u2-pad20_ net-_u2-pad21_ net-_u2-pad22_ net-_u2-pad23_ net-_u2-pad24_ ] u3
+a4 [net-_u2-pad29_ net-_u2-pad30_ net-_u2-pad31_ net-_u2-pad32_ net-_u2-pad33_ net-_u2-pad34_ net-_u2-pad35_ net-_u2-pad36_ ] [sine8 sine7 sine6 sine5 sine4 sine3 sine2 sin1 ] u9
+a5 [net-_u10-pad1_ net-_u10-pad2_ net-_u10-pad3_ net-_u10-pad4_ net-_u10-pad5_ net-_u10-pad6_ net-_u10-pad7_ net-_u10-pad8_ ] [sin0 cosine8 cosine7 cosine6 cosine5 cosine4 cosine3 cosine2 ] u10
+a6 [net-_u2-pad45_ net-_u2-pad46_ ] [cosine1 cosine0 ] u8
+a7 [gnd gnd gnd net-_u4-pad4_ ] [net-_u2-pad25_ net-_u2-pad26_ net-_u2-pad27_ net-_u2-pad28_ ] u4
+a8 [net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ net-_u2-pad6_ net-_u2-pad7_ net-_u2-pad8_ net-_u1-pad9_ ] [net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ net-_u1-pad14_ net-_u1-pad15_ net-_u1-pad16_ net-_u2-pad17_ net-_u2-pad18_ ] [net-_u2-pad19_ net-_u2-pad20_ net-_u2-pad21_ net-_u2-pad22_ net-_u2-pad23_ net-_u2-pad24_ net-_u2-pad25_ net-_u2-pad26_ net-_u2-pad27_ ] [net-_u2-pad28_ ] [net-_u2-pad29_ net-_u2-pad30_ net-_u2-pad31_ net-_u2-pad32_ net-_u2-pad33_ net-_u2-pad34_ net-_u2-pad35_ net-_u2-pad36_ net-_u10-pad1_ ] [net-_u10-pad2_ net-_u10-pad3_ net-_u10-pad4_ net-_u10-pad5_ net-_u10-pad6_ net-_u10-pad7_ net-_u10-pad8_ net-_u2-pad45_ net-_u2-pad46_ ] u2
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u5 adc_bridge(in_low=0.5 in_high=3.3 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u1 adc_bridge(in_low=0.5 in_high=3.3 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u3 adc_bridge(in_low=0.5 in_high=3.3 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u9 dac_bridge(out_low=0.5 out_high=3.3 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u10 dac_bridge(out_low=0.5 out_high=3.3 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_2, NgSpice Name: dac_bridge
+.model u8 dac_bridge(out_low=0.5 out_high=3.3 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_4, NgSpice Name: adc_bridge
+.model u4 adc_bridge(in_low=0.5 in_high=3.3 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             cordic, NgSpice Name: cordic
+.model u2 cordic(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+.tran 0.1e-09 6000e-09 0e-09
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(cosine0)
+plot v(cosine1)
+plot v(sine6)
+plot v(sine5)
+plot v(sine4)
+plot v(sine3)
+plot v(sine2)
+plot v(sin1)
+plot v(cosine8)
+plot v(sin0)
+plot v(cosine7)
+plot v(cosine6)
+plot v(cosine5)
+plot v(cosine4)
+plot v(cosine3)
+plot v(cosine2)
+plot v(sine8)
+plot v(sine7)
+.endc
+.end

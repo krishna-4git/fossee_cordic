@@ -1,0 +1,39 @@
+* C:\temp_esim\cordic\cordic.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 09/23/25 16:56:49
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U5  GND Net-_U1-Pad1_ GND GND Net-_U1-Pad1_ Net-_U1-Pad1_ GND Net-_U1-Pad1_ Net-_U2-Pad1_ Net-_U2-Pad2_ Net-_U2-Pad3_ Net-_U2-Pad4_ Net-_U2-Pad5_ Net-_U2-Pad6_ Net-_U2-Pad7_ Net-_U2-Pad8_ adc_bridge_8		
+U1  Net-_U1-Pad1_ GND GND GND GND GND GND GND Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ Net-_U1-Pad14_ Net-_U1-Pad15_ Net-_U1-Pad16_ adc_bridge_8		
+U3  GND GND GND GND Net-_U3-Pad5_ GND GND GND Net-_U2-Pad17_ Net-_U2-Pad18_ Net-_U2-Pad19_ Net-_U2-Pad20_ Net-_U2-Pad21_ Net-_U2-Pad22_ Net-_U2-Pad23_ Net-_U2-Pad24_ adc_bridge_8		
+U9  Net-_U2-Pad29_ Net-_U2-Pad30_ Net-_U2-Pad31_ Net-_U2-Pad32_ Net-_U2-Pad33_ Net-_U2-Pad34_ Net-_U2-Pad35_ Net-_U2-Pad36_ sine8 sine7 sine6 sine5 sine4 sine3 sine2 sin1 dac_bridge_8		
+U10  Net-_U10-Pad1_ Net-_U10-Pad2_ Net-_U10-Pad3_ Net-_U10-Pad4_ Net-_U10-Pad5_ Net-_U10-Pad6_ Net-_U10-Pad7_ Net-_U10-Pad8_ sin0 cosine8 cosine7 cosine6 cosine5 cosine4 cosine3 cosine2 dac_bridge_8		
+U8  Net-_U2-Pad45_ Net-_U2-Pad46_ cosine1 cosine0 dac_bridge_2		
+v1  Net-_U4-Pad4_ GND pulse		
+U6  cosine0 plot_v1		
+U11  cosine1 plot_v1		
+U13  sine6 plot_v1		
+U20  sine5 plot_v1		
+U14  sine4 plot_v1		
+U21  sine3 plot_v1		
+U15  sine2 plot_v1		
+U22  sin1 plot_v1		
+U16  cosine8 plot_v1		
+U23  sin0 plot_v1		
+U17  cosine7 plot_v1		
+U24  cosine6 plot_v1		
+U18  cosine5 plot_v1		
+U25  cosine4 plot_v1		
+U19  cosine3 plot_v1		
+U26  cosine2 plot_v1		
+U7  sine8 plot_v1		
+U12  sine7 plot_v1		
+U4  GND GND GND Net-_U4-Pad4_ Net-_U2-Pad25_ Net-_U2-Pad26_ Net-_U2-Pad27_ Net-_U2-Pad28_ adc_bridge_4		
+v2  Net-_U1-Pad1_ GND DC		
+v3  Net-_U3-Pad5_ GND DC		
+U2  Net-_U2-Pad1_ Net-_U2-Pad2_ Net-_U2-Pad3_ Net-_U2-Pad4_ Net-_U2-Pad5_ Net-_U2-Pad6_ Net-_U2-Pad7_ Net-_U2-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ Net-_U1-Pad14_ Net-_U1-Pad15_ Net-_U1-Pad16_ Net-_U2-Pad17_ Net-_U2-Pad18_ Net-_U2-Pad19_ Net-_U2-Pad20_ Net-_U2-Pad21_ Net-_U2-Pad22_ Net-_U2-Pad23_ Net-_U2-Pad24_ Net-_U2-Pad25_ Net-_U2-Pad26_ Net-_U2-Pad27_ Net-_U2-Pad28_ Net-_U2-Pad29_ Net-_U2-Pad30_ Net-_U2-Pad31_ Net-_U2-Pad32_ Net-_U2-Pad33_ Net-_U2-Pad34_ Net-_U2-Pad35_ Net-_U2-Pad36_ Net-_U10-Pad1_ Net-_U10-Pad2_ Net-_U10-Pad3_ Net-_U10-Pad4_ Net-_U10-Pad5_ Net-_U10-Pad6_ Net-_U10-Pad7_ Net-_U10-Pad8_ Net-_U2-Pad45_ Net-_U2-Pad46_ cordic		
+
+.end
