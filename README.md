@@ -127,7 +127,7 @@ especially when using **eSim 2.3 or above**, follow these steps:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Krishna**  
 🔗 [GitHub Repository](https://github.com/krishna-4git/cordic_verilog-4u)
