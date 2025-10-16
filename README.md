@@ -1,6 +1,7 @@
 #  Pipelined CORDIC Processor
 
-This repository contains the **design and verification files** for a **9-bit, 9-stage pipelined CORDIC (Coordinate Rotation Digital Computer) processor**.  
+This repository contains the **design and verification files** for a **9-bit, 9-stage pipelined CORDIC (Coordinate Rotation Digital Computer) processor**. The project is developed using a suite of **open-source EDA tools** centered around **eSim**. eSim is a powerful platform that integrates essential tools like **KiCad** (for schematic capture), **Ngspice** (for circuit simulation), **Verilator**, **Iverilog**, and **GTKWave** (for waveform viewing), creating a seamless design and verification environment. The processor is optimized for **high-throughput and real-time applications**.
+
 The project is developed using **open-source EDA tools** — **eSim**, **Iverilog**, and **GTKWave** — and is optimized for **high-throughput and real-time applications**.
 
 The **CORDIC algorithm** is chosen for its **hardware efficiency**, as it computes trigonometric functions using only **shift** and **addition** operations.  
